@@ -64,7 +64,7 @@ variable "quote_id" {
   default     = ""
 }
 
-variable "unbonded" {
+variable "unbonded_network" {
   description = "for ESX should be unbonded"
   type        = bool
   default     = true

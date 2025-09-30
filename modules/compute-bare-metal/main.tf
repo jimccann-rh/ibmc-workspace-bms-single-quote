@@ -73,7 +73,7 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   public_subnet          = var.public_subnet
   private_subnet         = var.private_subnet
   tags                   = var.tags
-  unbonded_network       = var.unbonded
+  unbonded_network       = var.unbonded_network
   #user_metadata   = ""
   #tags = []
 
