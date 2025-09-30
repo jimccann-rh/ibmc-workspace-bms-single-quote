@@ -47,7 +47,6 @@ variable "bms_private_subnet" {
   default     = ""
 }
 
-
 variable "bms_public_vlan" {
   description = "Public VLAN of BMS systems"
   type        = number
@@ -64,3 +63,10 @@ variable "quote_id" {
   type        = string
   default     = ""
 }
+
+variable "unbonded" {
+  description = "for ESX should be unbonded"
+  type        = bool
+  default     = true
+}
+

@@ -4,6 +4,7 @@ variable "public_vlan" {}
 variable "public_subnet" {}
 variable "private_vlan" {}
 variable "private_subnet" {}
+variable "unbonded" {}
 variable "tags" {}
 variable "quote_id" {}
 variable "domain_name" {}
