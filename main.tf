@@ -75,6 +75,7 @@ module "bare-metal-hosts" {
   public_subnet  = var.bms_public_subnet
   private_vlan   = var.bms_private_vlan
   private_subnet  = var.bms_private_subnet
+  unbonded_network  = var.unbonded_network
   quote_id  = var.quote_id
   tags         = local.tags
 }
