@@ -71,7 +71,7 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   #  array_type_id = 2
   #  disk_controller_index = 1
   #  hard_drive_category_codes = [ secondary_pcie_slot0, secondary_pcie_slot1 ]
-  }
+  #}
 
 
 
