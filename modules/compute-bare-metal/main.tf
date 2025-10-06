@@ -66,7 +66,7 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   network_speed = var.network_speed
   quote_id = var.quote_id
   dynamic "storage_groups" {
-    for_each = length(var.m2_drive_indexes) == 2 ? [var.m2_drive_indexes] : []
+    for_each = var.enable_m2_raid && length(var.m2_drive_indexes) == 2 ? [var.m2_drive_indexes] : []
     content {
       array_type_id = 2
       hard_drives   = storage_groups.value

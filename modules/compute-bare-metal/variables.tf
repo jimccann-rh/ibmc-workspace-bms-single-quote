@@ -24,5 +24,11 @@ variable "m2_drive_indexes" {
 variable "m2_array_size" {
   description = "RAID-1 array size in GB for the M.2 mirror"
   type        = number
-  default     = 480
+  default     = 0
+}
+
+variable "enable_m2_raid" {
+  description = "Enable explicit RAID-1 storage group for M.2 mirror"
+  type        = bool
+  default     = true
 }
