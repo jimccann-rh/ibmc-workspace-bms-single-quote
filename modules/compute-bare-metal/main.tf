@@ -65,6 +65,14 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   datacenter    = var.datacenter
   network_speed = var.network_speed
   quote_id = var.quote_id
+  storage_groups {
+  # RAID 1
+    array_type_id = 2
+    # Use the first two disks
+    hard_drives = [0, 1]
+    array_size  = 480
+
+
 
   # Optional fields
 
