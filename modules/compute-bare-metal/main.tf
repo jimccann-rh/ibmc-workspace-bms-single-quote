@@ -66,12 +66,12 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   network_speed = var.network_speed
   quote_id = var.quote_id
   disk_key_names         = ["secondary_pcie_slot0", "secondary_pcie_slot1" ]
-  #storage_groups {
-  #  array_size = 480
-  #  array_type_id = 2
+  storage_groups {
+    array_size = 480
+    array_type_id = 2
   #  disk_controller_index = 1
   #  hard_drive_category_codes = [ secondary_pcie_slot0, secondary_pcie_slot1 ]
-  #}
+  }
 
 
 
