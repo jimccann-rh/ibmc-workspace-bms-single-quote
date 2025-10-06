@@ -68,7 +68,7 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   dynamic "storage_groups" {
     for_each = var.enable_m2_raid && length(var.m2_drive_indexes) == 2 ? [var.m2_drive_indexes] : []
     content {
-      array_type_id = 2
+      array_type_id = MIRRORED_NVME_M_2_OS_BOOT_480GB
       hard_drives   = storage_groups.value
       array_size    = var.m2_array_size
     }

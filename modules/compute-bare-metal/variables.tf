@@ -18,8 +18,7 @@ variable "network_speed" {
 variable "m2_drive_indexes" {
   description = "Disk index pair for mirrored M.2 boot drives (e.g., [0,1])"
   type        = list(number)
-  default     = [35, 36]
-  #default     = [0, 1]
+  default     = [0, 1]
 }
 
 variable "m2_array_size" {
