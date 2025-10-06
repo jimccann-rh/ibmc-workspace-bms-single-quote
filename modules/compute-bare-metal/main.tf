@@ -69,7 +69,7 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   storage_groups {
     array_size = 480
     array_type_id = 2
-    hard_drives = [34, 35]
+    hard_drives = [18, 19]
   #  disk_controller_index = 1
   #  hard_drive_category_codes = [ secondary_pcie_slot0, secondary_pcie_slot1 ]
   }
