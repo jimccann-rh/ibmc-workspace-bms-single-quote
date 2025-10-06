@@ -65,10 +65,13 @@ resource "ibm_compute_bare_metal" "quote_bms_id" {
   datacenter    = var.datacenter
   network_speed = var.network_speed
   quote_id = var.quote_id
-  storage_groups {
-    array_type_id = 2              # RAID-1
-    hard_drives   = [m2_idx_a, m2_idx_b]
-    array_size    = 480            # or whatever size your M.2 pair uses
+  dynamic "storage_groups" {
+    for_each = length(var.m2_drive_indexes) == 2 ? [var.m2_drive_indexes] : []
+    content {
+      array_type_id = 2
+      hard_drives   = storage_groups.value
+      array_size    = var.m2_array_size
+    }
   }
 
 

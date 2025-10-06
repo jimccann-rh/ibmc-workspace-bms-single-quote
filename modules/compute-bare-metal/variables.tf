@@ -14,3 +14,15 @@ variable "network_speed" {
   #default     = 25000
   default     = 10000
 }
+
+variable "m2_drive_indexes" {
+  description = "Disk index pair for mirrored M.2 boot drives (e.g., [0,1])"
+  type        = list(number)
+  default     = []
+}
+
+variable "m2_array_size" {
+  description = "RAID-1 array size in GB for the M.2 mirror"
+  type        = number
+  default     = 480
+}
